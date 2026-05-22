@@ -101,3 +101,4 @@ En la prueba con 1,000,000 de registros, CSV fue más eficiente en almacenamient
 JSON fue menos eficiente en tamaño y tiempo, pero presentó mayor flexibilidad para representar información compleja y estructurada.
 
 Por esta razón, CSV se considera más útil para análisis estadístico, generación de reportes y manejo de datos tabulares, mientras que JSON se considera más útil cuando se requiere almacenar datos con estructura más detallada.
+
