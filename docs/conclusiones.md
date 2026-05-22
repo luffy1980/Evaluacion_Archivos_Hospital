@@ -52,3 +52,4 @@ El proyecto permitió comprobar que la organización de archivos influye directa
 CSV mostró mejores resultados en eficiencia y almacenamiento, mientras que JSON presentó mayor flexibilidad para representar información compleja.
 
 Con base en los resultados iniciales, CSV es más conveniente para análisis rápido y reportes, mientras que JSON es más útil cuando se requiere representar estructuras más completas.
+

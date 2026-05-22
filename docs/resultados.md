@@ -102,3 +102,11 @@ JSON fue menos eficiente en tamaño y tiempo, pero presentó mayor flexibilidad 
 
 Por esta razón, CSV se considera más útil para análisis estadístico, generación de reportes y manejo de datos tabulares, mientras que JSON se considera más útil cuando se requiere almacenar datos con estructura más detallada.
 
+Durante la prueba experimental se generaron 20,000,000 de registros simulados de pacientes en los formatos CSV y JSON. Posteriormente, se midieron el tiempo de escritura, tiempo de lectura, tamaño del archivo y cantidad de registros leídos.
+
+Los resultados obtenidos fueron los siguientes:
+
+| Formato | Tiempo de escritura | Tiempo de lectura | Tamaño del archivo | Registros leídos |
+|---|---:|---:|---:|---:|
+| CSV | 305.99 segundos | 37.17 segundos | 1543.72 MB | 20,000,000 |
+| JSON | 624.33 segundos | 67.23 segundos | 4004.19 MB | 20,000,000 |
