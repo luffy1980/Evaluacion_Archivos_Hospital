@@ -2,22 +2,26 @@
 
 ## Resultados de la experimentación
 
-Durante la prueba inicial se generaron 1000 registros simulados de pacientes en los formatos CSV y JSON. Posteriormente, se midieron el tiempo de escritura, tiempo de lectura y tamaño del archivo.
+Durante la prueba experimental se generaron 1,000,000 de registros simulados de pacientes en los formatos CSV y JSON. Posteriormente, se midieron el tiempo de escritura, tiempo de lectura, tamaño del archivo y cantidad de registros leídos.
 
 Los resultados obtenidos fueron los siguientes:
 
 | Formato | Tiempo de escritura | Tiempo de lectura | Tamaño del archivo | Registros leídos |
 |---|---:|---:|---:|---:|
-| CSV | 0.02 segundos | 0.01 segundos | 0.07 MB | 1000 |
-| JSON | 0.03 segundos | 0.01 segundos | 0.20 MB | 1000 |
+| CSV | 15.36 segundos | 1.91 segundos | 75.7 MB | 1,000,000 |
+| JSON | 29.85 segundos | 3.19 segundos | 198.73 MB | 1,000,000 |
 
 ## Comparación de resultados
 
-Con base en los resultados obtenidos, el formato CSV presentó un mejor desempeño en cuanto al tamaño del archivo, ya que ocupó menos espacio de almacenamiento que JSON.
+Con base en los resultados obtenidos con 1,000,000 de registros, el formato CSV presentó un mejor desempeño en escritura, lectura y almacenamiento.
 
-También se observó que el tiempo de escritura en CSV fue ligeramente menor que en JSON. Esto se debe a que CSV utiliza una estructura más simple basada en filas y columnas.
+El archivo CSV ocupó 75.7 MB, mientras que el archivo JSON ocupó 198.73 MB. Esto muestra que CSV consume menos espacio de almacenamiento.
 
-En cambio, JSON ocupó más espacio porque almacena una estructura jerárquica con etiquetas y datos anidados. Sin embargo, este formato ofrece mayor flexibilidad para representar información compleja, como los datos de una consulta médica dentro de cada paciente.
+También se observó que el tiempo de escritura fue menor en CSV, con 15.36 segundos, mientras que JSON tardó 29.85 segundos. En lectura, CSV tardó 1.91 segundos y JSON tardó 3.19 segundos.
+
+Esto se debe a que CSV utiliza una estructura simple basada en filas y columnas, mientras que JSON utiliza una estructura jerárquica con etiquetas y datos anidados.
+
+Sin embargo, JSON ofrece mayor flexibilidad para representar información compleja, como los datos de una consulta médica dentro de cada paciente.
 
 ## Gráficas generadas
 
@@ -82,9 +86,9 @@ El formato CSV resultó más adecuado para el análisis tabular y estadístico, 
 
 | Criterio | CSV | JSON |
 |---|---|---|
-| Tiempo de escritura | Más rápido en la prueba inicial | Ligeramente más lento |
-| Tiempo de lectura | Rápido | Rápido en prueba pequeña |
-| Tamaño del archivo | Menor tamaño | Mayor tamaño |
+| Tiempo de escritura | Más rápido: 15.36 segundos | Más lento: 29.85 segundos |
+| Tiempo de lectura | Más rápido: 1.91 segundos | Más lento: 3.19 segundos |
+| Tamaño del archivo | Menor tamaño: 75.7 MB | Mayor tamaño: 198.73 MB |
 | Procesamiento con Pandas | Más directo | Requiere más transformación |
 | Visualización | Más sencilla | Requiere adaptar datos |
 | Flexibilidad | Media | Alta |
@@ -92,6 +96,8 @@ El formato CSV resultó más adecuado para el análisis tabular y estadístico, 
 
 ## Resultado general
 
-En la prueba inicial, CSV fue más eficiente en almacenamiento y escritura, mientras que JSON fue más flexible para representar información compleja.
+En la prueba con 1,000,000 de registros, CSV fue más eficiente en almacenamiento, escritura y lectura.
 
-Por esta razón, CSV se considera más útil para análisis estadístico y generación de reportes, mientras que JSON se considera más útil cuando se requiere almacenar datos con estructura más detallada.
+JSON fue menos eficiente en tamaño y tiempo, pero presentó mayor flexibilidad para representar información compleja y estructurada.
+
+Por esta razón, CSV se considera más útil para análisis estadístico, generación de reportes y manejo de datos tabulares, mientras que JSON se considera más útil cuando se requiere almacenar datos con estructura más detallada.
